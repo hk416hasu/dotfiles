@@ -130,3 +130,10 @@ export PATH="$PATH:/home/hk416/.local/bin"
 export CHEAT_PATH="/home/hk416/.local/share/pipx/venvs/cheat/lib/python3.10/site-packages/usr/share/cheat"
 
 shopt -s globstar   # enable the globstar option to use ** for recursive globbing:
+
+alias mv='mv -i'
+
+alias gs='git status'
+
+PS1='\[\033[1;32m\]\w\[\033[0m\] > '    # bold and green PATH
+
