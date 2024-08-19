@@ -1,9 +1,12 @@
+let _curfile = expand("%:t")
+if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
+set noexpandtab
+else
 set expandtab
 set tabstop=4 
 set shiftwidth=4
 set softtabstop=4
-
-
+endif
 
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
 
@@ -12,6 +15,7 @@ set scrolloff=3         " keep 3 lines when scrolling
 set ai                  " set auto-indenting on for programming
 
 set showcmd             " display incomplete commands
+set number
 set relativenumber              " show line numbers
 set ruler               " show the current row and column
 
