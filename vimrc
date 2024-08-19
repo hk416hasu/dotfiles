@@ -1,11 +1,11 @@
 let _curfile = expand("%:t")
 if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
-set noexpandtab
+    set noexpandtab
 else
-set expandtab
-set tabstop=4 
-set shiftwidth=4
-set softtabstop=4
+    set expandtab
+    set tabstop=4 
+    set shiftwidth=4
+    set softtabstop=4
 endif
 
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
