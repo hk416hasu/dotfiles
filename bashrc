@@ -1,4 +1,4 @@
-#set -o vi
+set -o vi
 
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
