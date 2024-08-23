@@ -9,3 +9,6 @@ done
 
 # others:
 ln -s "$PWD/mpv.conf" "$HOME/.config/mpv/mpv.conf"
+
+# /root:
+sudo ln -s "$PWD/vimrc" "/root/.vimrc"
