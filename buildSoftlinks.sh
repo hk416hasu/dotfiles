@@ -16,6 +16,9 @@ ln -s "$PWD/mpv.conf" "$HOME/.config/mpv/mpv.conf"
 rm "$HOME/.dosbox/dosbox-0.74-3.conf"
 ln -s "$PWD/dosbox-0.74-3.conf" "$HOME/.dosbox/dosbox-0.74-3.conf"
 
+if [[ -f "/etc/tlp.conf" ]]; then rm /etc/tlp.conf; fi
+ln -s "$PWD/tlp.conf" "/etc/tlp.conf"
+
 # /root:
 sudo rm "/root/.vimrc"
 sudo ln -s "$PWD/vimrc" "/root/.vimrc"
