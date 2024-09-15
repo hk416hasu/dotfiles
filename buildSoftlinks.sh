@@ -9,24 +9,32 @@
 fileArray=("bashrc" "inputrc" "vimrc" "tmux.conf" "gitconfig")
 
 for elem in "${fileArray[@]}"; do
-    rm "$HOME/.${elem}"
+    if [[ -f "$HOME/.${elem}" ]]; then
+        rm "$HOME/.${elem}"
+    fi
     ln -s "$PWD/${elem}" "$HOME/.${elem}"
 done
 
 # others:
-rm "$HOME/.config/mpv/mpv.conf"
+if [[ -f "$HOME/.config/mpv/mpv.conf" ]]; then
+    rm "$HOME/.config/mpv/mpv.conf"
+fi
 ln -s "$PWD/mpv.conf" "$HOME/.config/mpv/mpv.conf"
 
-rm "$HOME/.dosbox/dosbox-0.74-3.conf"
+if [[ -f "$HOME/.dosbox/dosbox-0.74-3.conf" ]]; then
+    rm "$HOME/.dosbox/dosbox-0.74-3.conf"
+fi
 ln -s "$PWD/dosbox-0.74-3.conf" "$HOME/.dosbox/dosbox-0.74-3.conf"
 
-if [[ -f "/etc/tlp.conf" ]]; then rm /etc/tlp.conf; fi
-ln -s "$PWD/tlp.conf" "/etc/tlp.conf"
+if [[ -f "/etc/tlp.conf" ]]; then sudo rm /etc/tlp.conf; fi
+sudo ln -s "$PWD/tlp.conf" "/etc/tlp.conf"
 
 #keyboardPath="/etc/default/keyboard"
 #if [[ -f "$keyboardPath" ]]; then rm "$keyboardPath"; fi
 #ln -s "$PWD/keyboard" "$keyboardPath"
 
 # /root:
-sudo rm "/root/.vimrc"
+if [[ -f "/root/.vimrc" ]]; then
+    sudo rm "/root/.vimrc"
+fi
 sudo ln -s "$PWD/vimrc" "/root/.vimrc"
