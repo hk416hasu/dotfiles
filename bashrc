@@ -138,3 +138,4 @@ alias gs='git status'
 # PS1='\[\033[1;32m\]\w\[\033[0m\] > '    # bold and green PATH
 PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
 
+. "$HOME/.cargo/env"
