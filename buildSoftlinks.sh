@@ -29,6 +29,11 @@ ln -s "$PWD/dosbox-0.74-3.conf" "$HOME/.dosbox/dosbox-0.74-3.conf"
 if [[ -f "/etc/tlp.conf" ]]; then sudo rm /etc/tlp.conf; fi
 sudo ln -s "$PWD/tlp.conf" "/etc/tlp.conf"
 
+if [[ -f "/usr/share/applications/qqmusic.desktop" ]]; then
+    sudo rm /usr/share/applications/qqmusic.desktop
+fi
+sudo ln -s "$PWD/qqmusic.desktop" /usr/share/applications/qqmusic.desktop
+
 #keyboardPath="/etc/default/keyboard"
 #if [[ -f "$keyboardPath" ]]; then rm "$keyboardPath"; fi
 #ln -s "$PWD/keyboard" "$keyboardPath"
