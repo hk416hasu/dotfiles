@@ -34,6 +34,11 @@ if [[ -f "/usr/share/applications/qqmusic.desktop" ]]; then
 fi
 sudo ln -s "$PWD/qqmusic.desktop" /usr/share/applications/qqmusic.desktop
 
+if [[ -f "$HOME/.ssh/config" ]]; then
+    rm "$HOME/.ssh/config"
+fi
+ln -s "$PWD/sshConfig" "$HOME/.ssh/config"
+
 #keyboardPath="/etc/default/keyboard"
 #if [[ -f "$keyboardPath" ]]; then rm "$keyboardPath"; fi
 #ln -s "$PWD/keyboard" "$keyboardPath"

@@ -1,0 +1,4 @@
+Host remote
+    HostName 82.156.207.47
+    User ubuntu
+    # Port 22
