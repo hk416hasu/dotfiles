@@ -136,6 +136,9 @@ shopt -s globstar   # enable the globstar option to use ** for recursive globbin
 alias mv='mv -i'
 
 alias gs='git status'
+alias gitmagic='echo "git log --all --graph --decorate --oneline" && git log --all --graph --decorate --oneline'
+
+alias python='python3'
 
 # PS1='\[\033[1;32m\]\w\[\033[0m\] > '    # bold and green PATH
 PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
