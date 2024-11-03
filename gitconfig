@@ -3,3 +3,5 @@
 	email = vbcgfh487882183@126.com
 [core]
 	editor = vim
+[alias]
+	magic = log --oneline --graph --decorate --all
