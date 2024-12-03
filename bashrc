@@ -142,3 +142,8 @@ alias grepcolor="grep --color=always"
 PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
 
 . "$HOME/.cargo/env"
+
+export NEMU_HOME=/home/hk416/src/ics2024/nemu
+
+export AM_HOME=/home/hk416/src/ics2024/abstract-machine
+export PATH="/usr/lib/ccache:$PATH"
