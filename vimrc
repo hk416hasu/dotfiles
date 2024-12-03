@@ -58,3 +58,5 @@ set t_RV=               " http://bugs.debian.org/608242, http://groups.google.co
 set t_Co=256
 
 colorscheme desert
+
+set nowrap
