@@ -84,7 +84,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+    alias grep='grep --color=always'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -137,6 +137,8 @@ alias mv='mv -i'
 alias gs='git status'
 alias python='python3'
 alias grepcolor="grep --color=always"
+alias tree="tree -C"
+alias less="less -R"
 
 # PS1='\[\033[1;32m\]\w\[\033[0m\] > '    # bold and green PATH
 PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
@@ -144,6 +146,6 @@ PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
 . "$HOME/.cargo/env"
 
 export NEMU_HOME=/home/hk416/src/ics2024/nemu
-
 export AM_HOME=/home/hk416/src/ics2024/abstract-machine
+
 export PATH="/usr/lib/ccache:$PATH"
