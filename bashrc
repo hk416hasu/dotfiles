@@ -121,7 +121,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PROMPT_DIRTRIM=2
+PROMPT_DIRTRIM=3
 
 #d=$(pwd)
 #e=$( echo "$d" | sed -E 's#([^/]{4})[^/]{13,}([^/.]{3})#\1...\2#g' )
@@ -139,6 +139,7 @@ alias python='python3'
 alias grepcolor="grep --color=always"
 alias tree="tree -C"
 alias less="less -R"
+alias fvim='vim $(fzf)'
 
 # PS1='\[\033[1;32m\]\w\[\033[0m\] > '    # bold and green PATH
 PS1='\[\033[1;32m\]\w\[\033[1;31m\] ${?/#0/}\[\033[0m\]> '
@@ -149,3 +150,8 @@ export NEMU_HOME=/home/hk416/src/ics2024/nemu
 export AM_HOME=/home/hk416/src/ics2024/abstract-machine
 
 export PATH="/usr/lib/ccache:$PATH"
+
+#export C_INCLUDE_PATH=/usr/include:/usr/lib/gcc/x86_64-linux-gnu/12/include
+#export CPLUS_INCLUDE_PATH=/usr/include:/usr/lib/gcc/x86_64-linux-gnu/12/include
+#export CC=/usr/bin/gcc-12
+#export CXX=/usr/bin/g++-12
