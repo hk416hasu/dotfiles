@@ -15,6 +15,10 @@ for elem in "${fileArray[@]}"; do
     ln -s "$PWD/${elem}" "$HOME/.${elem}"
 done
 
+# AT&T syntax
+mkdir -p "$HOME/.vim/syntax"
+cp "./vim/syntax/gas.vim" "$HOME/.vim/syntax"
+
 # others:
 if [[ -f "$HOME/.config/mpv/mpv.conf" ]]; then
     rm "$HOME/.config/mpv/mpv.conf"

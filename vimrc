@@ -3,9 +3,9 @@ if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
     set noexpandtab
 else
     set expandtab
-    set tabstop=4 
-    set shiftwidth=4
-    set softtabstop=4
+    set tabstop=2
+    set shiftwidth=2
+    set softtabstop=2
 endif
 
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
@@ -60,3 +60,7 @@ set t_Co=256
 colorscheme desert
 
 set nowrap
+
+let g:html_indent_script1 = "zero"
+
+autocmd BufRead,BufNewFile *.s,*.asm set filetype=gas
